@@ -14,7 +14,7 @@ jobs:
             apt install -y latexmk make texlive-lang-cjk texlive-latex-extra
       - run:
           name: Build
-          command: latexmk -jobname=/pdfs
+          command: latexmk -jobname=pdfs/out
       - store_artifacts:
-          path: /pdfs
+          path: pdfs/
           
