@@ -11,7 +11,7 @@ jobs:
           name: Setup
           command: |
             apt update
-            apt install -y latexmk make texlive texlive-latex-extra
+            apt install -y latexmk make texlive-lang-cjk texlive-latex-extra
       - run:
           name: Build
           command: latexmk
