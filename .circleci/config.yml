@@ -10,6 +10,8 @@ jobs:
           command: |
             apt update
             apt install -y latexmk make texlive texlive-latex-extra
+          environment:
+            DEBIAN_FRONTEND: noninteractive
       - run:
           name: Build
           command: latexmk
