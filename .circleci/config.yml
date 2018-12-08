@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            apt update
+            apt install -y latexmk make texlive texlive-latex-extra
+      - run:
+          name: Build
+          command: latexmk
