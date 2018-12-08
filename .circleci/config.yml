@@ -13,8 +13,11 @@ jobs:
             apt update
             apt install -y latexmk make texlive-lang-cjk texlive-latex-extra
       - run:
+          name: Making out directory
+          command: mkdir out
+      - run:
           name: Build
-          command: latexmk -jobname=pdfs/out
+          command: latexmk -jobname=out/doc
       - store_artifacts:
-          path: pdfs/
+          path: out/
           
