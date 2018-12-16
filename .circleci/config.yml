@@ -16,6 +16,9 @@ jobs:
           name: Making out directory
           command: mkdir out
       - run:
+          name: JPFont setting
+          command: kanji-config-updmap-sys ipaex
+      - run:
           name: Build
           command: latexmk -jobname=out/doc
       - store_artifacts:
